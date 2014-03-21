@@ -1,0 +1,11 @@
+# Jekyll config
+permalink: /:year/:title
+pygments: true
+paginate: 15
+exclude: [ newpost.sh, notes.md ]
+markdown: redcarpet
+
+# site-wide variables
+name: Internet Alchemy
+#url: http://amberfell.com/
+css_version: '02'
