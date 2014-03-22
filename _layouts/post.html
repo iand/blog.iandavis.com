@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>{{page.title}} by Ian Davis</title>
+  <meta name="author" content="Ian Davis">
+  
+  <link rel="canonical" href="http://blog.iandavis.com{{page.url}}/">
+  <meta name="google-site-verification" content="sUOD0ASJRYXju2rWAPY4nkS5UFgCYI0DT3oZM6vr0sQ">
+  <link rel="alternate" type="application/rss+xml" title="Internet Alchemy &raquo; Feed" href="http://blog.iandavis.com/feed/"> 
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- CSS
+  ================================================== -->
+  <link rel="stylesheet" href="/stylesheets/base.css">
+  <link rel="stylesheet" href="/stylesheets/skeleton.css">
+  <link rel="stylesheet" href="/stylesheets/layout.css">
+  <link rel="stylesheet" href="/stylesheets/blog.css">
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Favicons
+  ================================================== -->
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+</head>
+<body>
+
+  <div class="container">  
+    <div class="sixteen columns">
+      <h1 class="remove-bottom" style="margin-top: 40px">Ian Davis</h1>
+      <div>
+                 <a href="http://iandavis.com/">home</a> 
+        &middot; <a href="http://iandavis.com/profile">profile</a>
+        &middot; <a href="http://blog.iandavis.com/">blog</a> 
+        &middot; <a href="http://iandavis.com/projects">projects</a>
+        &middot; <a href="http://iandavis.com/elsewhere">elsewhere</a>
+        &middot; <a href="http://iandavis.com/pres/">presentations</a>
+      </div>
+      <hr />
+    </div>
+    <div class="one-third column" itemscope itemtype="http://schema.org/Person" itemid="http://iandavis.com/id/me">
+    <p>
+      <a href="/blog/about"><img src="http://iandavis.com/depiction-128.jpg" width="128" height="128" alt="Picture of Ian Davis" itemprop="image"></a>
+    </p>
+    <p itemprop="description">
+      <a href="/"><span itemprop="name">Ian Davis</span></a>: <span itemprop="nationality">British</span> technology entrepreneur.
+    </p>
+    
+    
+    <dl>
+      <dt><strong>My URI:</strong></dt><dd><p><a href="http://iandavis.com/id/me">http://iandavis.com/id/me</a> 
+      <a href="http://iandavis.com/id/me"><img src="http://iandavis.com/2006/foaf-icons/foafTiny.gif" style="border-width: 0px; text-align:right;"/></a></p></dd>
+
+      <dt><strong>Email Me:</strong></dt><dd><p><a href="mailto:nospam@iandavis.com" itemprop="email">nospam@iandavis.com</a></dd>
+      <dt><strong>Updates:</strong></dt><dd><p><a href="http://twitter.com/iand" rel="me">twitter</a>, <a href="https://plus.google.com/u/2/114972661571648085271/posts" rel="author me">google+</a></p></dd>
+      </dl>
+        </p>   
+
+    </div>
+    <div class="two-thirds column">
+      <h2>{{page.title}}</h2>
+
+      {{content}}
+
+
+      <hr>
+      <p class="meta">
+      </p>
+
+      <h3>Related Posts</h3>
+      
+      <p>
+        {% if page.next.url %}
+        Next post: <a href="{{page.next.url}}">{{page.next.title}}</a>
+        {% endif %}
+      </p>
+
+      <p>
+        {% if page.previous.url %}
+        Previous post: <a href="{{page.previous.url}}">{{page.previous.title}}</a>
+        {% endif %}
+      </p>
+
+
+      <p>You might also like some of these lucky dip posts:</p>
+
+      <ul class="square">
+        {% for post in site.related_posts %}
+          <li> <a href="{{post.url}}">{{post.title}}</a></li>
+        {% endfor %}
+      </ul>
+
+    </div>
+
+  </div>
+</body>
+</html>
+
+

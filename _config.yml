@@ -1,5 +1,5 @@
 # Jekyll config
-permalink: /:year/:title
+permalink: /:year/:month/:day/:title
 pygments: true
 paginate: 15
 exclude: [ newpost.sh, notes.md ]
